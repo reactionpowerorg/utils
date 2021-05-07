@@ -1,0 +1,129 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<!--multisteps-form-->
+<div class="multisteps-form">
+    <!--progress bar-->
+    <div class="row">
+        <div class="col-12 col-lg-8 ml-auto mr-auto mb-4">
+            <div class="multisteps-form__progress">
+                <button class="multisteps-form__progress-btn js-active" type="button" title="User Info">1</button>
+                <button class="multisteps-form__progress-btn" type="button" title="Address">2</button>
+                <button class="multisteps-form__progress-btn" type="button" title="Address">3</button>
+                <button class="multisteps-form__progress-btn" type="button" title="Address">4</button>
+                <button class="multisteps-form__progress-btn" type="button" title="Address">5</button>
+                <button class="multisteps-form__progress-btn" type="button" title="Address">6</button>
+            </div>
+        </div>
+    </div>
+    <!--form panels-->
+    <div class="row">
+        <div class="col-12 col-lg-8 m-auto">
+            <form action="" class="multisteps-form__form" method="POST">
+                {% csrf_token %}
+                <!--single form panel-->
+                <div class="multisteps-form__panel shadow p-4 rounded bg-white js-active" data-animation="scaleIn">
+                    <h3 class="multisteps-form__title">Your Morale</h3>
+                    <div class="multisteps-form__content">
+                        {{ form.rating | as_crispy_field }}
+                        <div class="button-row d-flex mt-4">
+                            <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button>
+                        </div>
+                    </div>
+                </div>
+                <!--single form panel-->
+                <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
+                    <h3 class="multisteps-form__title">Your Goal</h3>
+                    <div class="multisteps-form__content">
+
+                        <div class="form-row mt-4">
+                            <div class="col">
+                                {{ form.goal | as_crispy_field }}
+                            </div>
+                        </div>
+                        <div class="button-row d-flex mt-4">
+                            <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
+                            <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button>
+                        </div>
+                    </div>
+                </div>
+                <!--single form panel-->
+                <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
+                    <h3 class="multisteps-form__title">Highlights/Lowlights</h3>
+                    <div class="multisteps-form__content">
+                        <div class="row">
+                            <div class="col-12 col-md-12 mt-4">
+                                <div class="card shadow-sm">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Highlights</h5>
+                                        {{ form.highlights | as_crispy_field }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-12 mt-4">
+                                <div class="card shadow-sm">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Lowlights</h5>
+                                        {{ form.lowlights | as_crispy_field }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="button-row d-flex mt-4 col-12">
+                                <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
+                                <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--single form panel-->
+                <!--single form panel-->
+                <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
+                    <h3 class="multisteps-form__title">Work Load</h3>
+                    <div class="multisteps-form__content">
+                        <div class="form-row mt-4">
+                            <div class="col">
+                                {{ form.wload | as_crispy_field }}
+                            </div>
+                        </div>
+                        <div class="button-row d-flex mt-4">
+                            <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
+                            <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!--single form panel-->
+                <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
+                    <h3 class="multisteps-form__title">Goal Completion</h3>
+                    <div class="multisteps-form__content">
+                        <div class="form-row mt-4">
+                            <div class="col">
+                                {{ form.goal_obst | as_crispy_field }}
+                            </div>
+                        </div>
+                        <div class="button-row d-flex mt-4">
+                            <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
+                            <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
+                    <h3 class="multisteps-form__title">Monthly Tip</h3>
+                    <div class="multisteps-form__content">
+                        <div class="form-row mt-4">
+                            {{ form.m_tip | as_crispy_field }}
+                        </div>
+                        <div class="button-row d-flex mt-4">
+                            <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
+                            <!--                    <button class="btn btn-success ml-auto" type="button" title="Send">Send</button>-->
+                            <input type="submit" class="btn btn-success ml-auto" value="submit">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

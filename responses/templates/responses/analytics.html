@@ -1,0 +1,128 @@
+{% extends 'responses/base.html' %}
+{% load response_tags %}
+
+{% block body %}
+
+<div class="flex items-center justify-center">
+    <h2>People Analytics</h2>
+</div>
+<!--<hr class="border-b-2 border-gray-400 my-8 mx-4">-->
+
+<div class="flex flex-row flex-wrap flex-grow mt-2">
+    <div class="w-full md:w-2/3 p-3">
+        <!--Graph Card-->
+        <div class="bg-white border rounded shadow">
+            <div class="border-b p-3">
+                <h5 class="font-bold uppercase text-gray-600">Team Motivation</h5>
+            </div>
+            <div class="p-5">
+                <canvas id="chartjs-7" class="chartjs" width="undefined" height="undefined"></canvas>
+                <script>
+                            new Chart(document.getElementById("chartjs-7"), {
+                                "type": "line",
+                                "data": {
+                                    "labels": {{ month | safe }},
+                                    "datasets": [{
+                                        "label": "Average Team motivation (%)",
+                                        "data": {{ morale | safe }},
+                                        "borderColor": "rgb(255, 99, 132)",
+                                        "backgroundColor": "rgba(255, 99, 132, 0.2)"
+                                    }]
+                                },
+                                "options": {
+                                    "scales": {
+                                        "yAxes": [{
+                                            "ticks": {
+                                                "beginAtZero": true
+                                            }
+                                        }]
+                                    }
+                                }
+                            });
+
+
+
+
+
+
+
+
+                </script>
+            </div>
+        </div>
+        <!--/Graph Card-->
+    </div>
+
+
+    <div class="w-full md:w-1/3   ">
+         <div class="border-b p-3 ">
+                <h5 class="font-bold uppercase text-gray-600">Quick Stats</h5>
+            </div>
+        <div class=" border rounded shadow">
+            <!--Graph Card-->
+            <div class="bg-white  rounded shadow">
+                <div class="p-5">
+                    <div class="bg-white border rounded shadow p-2">
+                        <div class="flex flex-row items-center">
+                            <div class="flex-shrink pr-4">
+                                <div class="rounded p-3 bg-pink-600"><i class="fas fa-users fa-2x fa-fw fa-inverse"></i>
+                                </div>
+                            </div>
+                            <div class="flex-1 text-right md:text-center">
+                                <h5 class="font-bold uppercase text-gray-500">Average Team Motivation</h5>
+                                <h3 class="font-bold text-3xl">{{ atm }} % <span class="text-pink-500"><i
+                                        class="fas fa-arrow-{{mot_arrow}}"></i></span></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!--/Graph Card-->
+            <hr class="border-b-2 border-red-400 my-8 mx-4">
+            <div class="bg-white  rounded shadow">
+                <div class="p-5">
+                    <div class="bg-white border rounded shadow p-2">
+                        <div class="flex flex-row items-center">
+                            <div class="flex-shrink pr-4">
+                                <div class="rounded p-3 bg-white-600">
+                                    <h3 class="font-bold text-5xl"><span class="text-pink-500">
+                                        <i class="fas fa-smile"></i></span></h3>
+                                </div>
+                            </div>
+                            <div class="flex-1 text-right md:text-center">
+                                <h5 class="font-bold uppercase text-gray-500">Most Motivated</h5>
+                                <h3 class="font-bold text-3xl">{{ motivated}}/{{user_count}} <span class="text-pink-500">
+                                    <i class="fas fa-smile"></i>
+                                </span></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="border-b-2 border-red-400 my-8 mx-4">
+            <div class="bg-white  rounded shadow">
+                <div class="p-5">
+                    <div class="bg-white border rounded shadow p-2">
+                        <div class="flex flex-row items-center">
+                            <div class="flex-shrink pr-4">
+                                <div class="rounded p-3 bg-white-600">
+                                    <h3 class="font-bold text-3xl"> <span class="text-pink-500"><i
+                                        class="fas fa-frown"></i></span></h3>
+                                </div>
+                            </div>
+                            <div class="flex-1 text-right md:text-center">
+                                <h5 class="font-bold uppercase text-gray-500">Least Motivated</h5>
+                                <h3 class="font-bold text-3xl">{{ not_motivated}}/{{user_count}}  <span class="text-pink-500"><i
+                                        class="fas fa-frown"></i></span></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock body %}

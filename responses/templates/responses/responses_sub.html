@@ -1,0 +1,131 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<!--multisteps-form-->
+<style type="text/css">
+.tile{
+	width: 100%;
+	background:#fff;
+	border-radius:5px;
+	box-shadow:0px 2px 3px -1px rgba(151, 171, 187, 0.7);
+	float:left;
+  	transform-style: preserve-3d;
+  	margin: 10px 5px;
+
+}
+.banner-img {
+	padding: 5px 5px 0;
+}
+
+.banner-img img {
+	width: 100%;
+	height: 250px;
+	border-radius: 5px;
+}
+
+.dates{
+	border:1px solid #ebeff2;
+	border-radius:5px;
+	padding:20px 0px;
+	margin:10px 20px;
+	font-size:16px;
+	color:#5aadef;
+	font-weight:600;
+	overflow:auto;
+}
+.dates div{
+	float:left;
+	width:50%;
+	text-align:center;
+	position:relative;
+}
+.dates strong,
+.stats strong{
+	display:block;
+	color:#adb8c2;
+	font-size:11px;
+	font-weight:700;
+}
+.dates span{
+	width:1px;
+	height:40px;
+	position:absolute;
+	right:0;
+	top:0;
+	background:#ebeff2;
+}
+
+.stats div{
+	border-right:1px solid #ebeff2;
+	width: 33.33333%;
+	float:left;
+	text-align:center
+}
+
+.stats div:nth-of-type(3){border:none;}
+
+div.footer {
+	text-align: right;
+	position: relative;
+	margin: 20px 5px;
+}
+
+div.footer a.Cbtn{
+	padding: 10px 25px;
+	background-color: #DADADA;
+	color: #666;
+	margin: 10px 2px;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-decoration: none;
+	border-radius: 3px;
+}
+
+div.footer a.Cbtn-primary{
+	background-color: #5AADF2;
+	color: #FFF;
+}
+
+div.footer a.Cbtn-primary:hover{
+	background-color: #7dbef5;
+}
+
+div.footer a.Cbtn-danger{
+	background-color: #fc5a5a;
+	color: #FFF;
+}
+
+div.footer a.Cbtn-danger:hover{
+	background-color: #fd7676;
+}
+
+</style>
+<div class="multisteps-form">
+
+    <div class="row">
+        <div class="col-12 col-lg-8 m-auto">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="tile">
+                    <div class="wrapper">
+                        <div class="banner-img mx-auto">
+                            <img src="https://reactionpower.com/wp-content/uploads/2020/05/footer-logo.png"
+                                 alt="Image 1">
+                        </div>
+
+                        <div class="dates">
+                            <p>Your submission for this month was saved successfully.</p>
+                        </div>
+
+                        <div class="footer">
+                            <a href="{% url 'responses:team_single' user_id %}" class="Cbtn Cbtn-primary">View Previous
+                                Submissions</a>
+                            <a href="{% url 'responses:highlights'  %}" class="Cbtn Cbtn-danger">View Top Highlights</a>
+                            <hr>
+                            <a href="{% url 'logout'  %}" class="Cbtn Cbtn-info">Logout</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,219 @@
+<div class="flex items-center justify-center">
+    <h2> Get Started Here </h2>
+</div>
+<hr class="border-b-2 border-gray-400 my-8 mx-4">
+<div class="flex items-center justify-center">
+
+    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4">
+
+        <!-- 1 card -->
+        <div class="relative bg-white py-6 px-6 rounded-3xl w-64 my-4 shadow-xl">
+            <div class=" text-white flex items-center absolute rounded-full py-4 px-4 shadow-xl bg-red-500 left-4 -top-6">
+                <!-- svg  -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                     stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+                </svg>
+
+            </div>
+            <div class="mt-8">
+                <p class="text-xl font-semibold my-2">Team</p>
+
+                <div class="border-t-2"></div>
+
+                <div class="flex justify-between">
+                    <div class="my-2">
+                        <div class="flex space-x-2">
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="my-2 mb-5">
+                        <a href="{% url 'responses:team' %}">
+                            <button class="bg-blue-500 mt-5 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">
+                                View
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 2 card -->
+        <div class="relative bg-white py-6 px-6 rounded-3xl w-64 my-4 shadow-xl">
+            <div class=" text-white flex items-center absolute rounded-full py-4 px-4 shadow-xl bg-red-500 left-4 -top-6">
+                <!-- svg  -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                     stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/>
+                </svg>
+            </div>
+            <div class="mt-8">
+                <p class="text-xl font-semibold my-2">Responses</p>
+
+                <div class="border-t-2"></div>
+
+                <div class="flex justify-between">
+                    <div class="my-2">
+                        <div class="flex space-x-2">
+                        </div>
+                    </div>
+                    <div class="my-2">
+                        <a href="{% url 'responses:all_resp' %}">
+                            <button class="bg-blue-500 mt-5 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">
+                                View
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 3 card -->
+        <div class="relative bg-white py-6 px-6 rounded-3xl w-64 my-4 shadow-xl">
+            <div class=" text-white flex items-center absolute rounded-full py-4 px-4 shadow-xl bg-red-500 left-4 -top-6">
+                <!-- svg  -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                     stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"/>
+                </svg>
+            </div>
+            <div class="mt-8">
+                <p class="text-xl font-semibold my-2">Response Analytics</p>
+
+                <div class="border-t-2"></div>
+
+                <div class="flex justify-between">
+                    <div class="my-2">
+                        <div class="flex space-x-2">
+                        </div>
+                    </div>
+                    <div class="my-2">
+                        <a href="{% url 'responses:analytics' %}">
+                            <button class="bg-blue-500 mt-5 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">
+                                View
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 4 card -->
+        <div class="relative bg-white py-6 px-6 rounded-3xl w-64 my-4 shadow-xl">
+            <div class=" text-white flex items-center absolute rounded-full py-4 px-4 shadow-xl bg-red-500 left-4 -top-6">
+                <!-- svg  -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                     stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                </svg>
+            </div>
+            <div class="mt-8">
+                <p class="text-xl font-semibold my-2">Report Writer</p>
+
+                <div class="border-t-2"></div>
+
+                <div class="flex justify-between">
+                    <div class="my-2">
+                        <div class="flex space-x-2">
+                        </div>
+                    </div>
+                    <div class="my-2">
+<!--                        <button class="">-->
+<!--                            View-->
+<!--                        </button>-->
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                                type="button" onclick="toggleModal('modal-id')">
+                            View
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <!-- 4 card -->
+        <div class="relative bg-white py-6 px-6 rounded-3xl w-64 my-4 shadow-xl">
+            <div class=" text-white flex items-center absolute rounded-full py-4 px-4 shadow-xl bg-red-500 left-4 -top-6">
+                <!-- svg  -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                     stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                </svg>
+            </div>
+            <div class="mt-8">
+                <p class="text-xl font-semibold my-2">Add new users</p>
+
+                <div class="border-t-2"></div>
+
+                <div class="flex justify-between">
+                    <div class="my-2">
+                        <div class="flex space-x-2">
+                        </div>
+                    </div>
+                    <div class="my-2">
+<!--                        <button class="">-->
+<!--                            View-->
+<!--                        </button>-->
+                        <a href="/admin">
+                            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                                type="button" >
+                            View
+                        </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="hidden overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center"
+     id="modal-id">
+    <div class="relative w-auto my-6 mx-auto max-w-sm">
+        <!--content-->
+        <div class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+            <!--header-->
+            <div class="flex items-start justify-between p-5 border-b border-solid border-blueGray-200 rounded-t">
+                <h3 class="text-3xl font-semibold">
+                    Note
+                </h3>
+                <button class="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
+                        onclick="toggleModal('modal-id')">
+          <span class="bg-transparent text-black opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none">
+            ×
+          </span>
+                </button>
+            </div>
+            <!--body-->
+            <div class="relative p-6 flex-auto">
+                <p class="my-4 text-blueGray-500 text-lg leading-relaxed">
+                    Coming Soon
+                </p>
+            </div>
+            <!--footer-->
+            <div class="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
+                <button class="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                        type="button" onclick="toggleModal('modal-id')">
+                    Close
+                </button>
+                <button class="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                        type="button" onclick="toggleModal('modal-id')">
+                    Save Changes
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="hidden opacity-25 fixed inset-0 z-40 bg-black" id="modal-id-backdrop"></div>
+<script type="text/javascript">
+  function toggleModal(modalID){
+    document.getElementById(modalID).classList.toggle("hidden");
+    document.getElementById(modalID + "-backdrop").classList.toggle("hidden");
+    document.getElementById(modalID).classList.toggle("flex");
+    document.getElementById(modalID + "-backdrop").classList.toggle("flex");
+  }
+
+</script>

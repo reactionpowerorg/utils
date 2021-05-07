@@ -1,0 +1,147 @@
+{% extends 'responses/base.html' %}
+
+{% block body %}
+<div class="flex items-center justify-center">
+    <h2></h2>
+</div>
+<div class="flex items-center justify-center  bg-gray-100" style="margin-top:30px;">
+    <div class="flex flex-col items-center w-full max-w-xs p-4 bg-white rounded-3xl md:flex-row">
+        <div class="-mt-28 md:-my-16 md:-ml-32" style="clip-path: url(#roundedPolygon)">
+            <img src="data:image/png;base64,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"
+                 class="w-auto h-48"
+                 alt="Ahmed Kamel"
+            />
+        </div>
+        <div class="flex flex-col space-y-4">
+            <div class="flex flex-col items-center md:items-start">
+                <h2 class="text-xl font-medium"> Team List </h2>
+                <p class="text-base font-medium text-gray-400"></p>
+            </div>
+
+        </div>
+    </div>
+    <svg width="0" height="0" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+
+            <clipPath id="roundedPolygon">
+                <path
+                        d="M79 6.237604307034a32 32 0 0 1 32 0l52.870489570875 30.524791385932a32 32 0 0 1 16 27.712812921102l0 61.049582771864a32 32 0 0 1 -16 27.712812921102l-52.870489570875 30.524791385932a32 32 0 0 1 -32 0l-52.870489570875 -30.524791385932a32 32 0 0 1 -16 -27.712812921102l0 -61.049582771864a32 32 0 0 1 16 -27.712812921102"
+                />
+            </clipPath>
+        </defs>
+    </svg>
+</div>
+<hr class="border-b-0 border-white-0 my-8 mx-4">
+<style type="text/css">
+    		/*Form fields*/
+		.dataTables_wrapper select,
+		.dataTables_wrapper .dataTables_filter input {
+			color: #4a5568; 			/*text-gray-700*/
+			padding-left: 1rem; 		/*pl-4*/
+			padding-right: 1rem; 		/*pl-4*/
+			padding-top: .5rem; 		/*pl-2*/
+			padding-bottom: .5rem; 		/*pl-2*/
+			line-height: 1.25; 			/*leading-tight*/
+			border-width: 2px; 			/*border-2*/
+			border-radius: .25rem;
+			border-color: #edf2f7; 		/*border-gray-200*/
+			background-color: #edf2f7; 	/*bg-gray-200*/
+		}
+
+		/*Row Hover*/
+		table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
+			background-color: #ebf4ff;	/*bg-indigo-100*/
+		}
+
+		/*Pagination Buttons*/
+		.dataTables_wrapper .dataTables_paginate .paginate_button		{
+			font-weight: 700;				/*font-bold*/
+			border-radius: .25rem;			/*rounded*/
+			border: 1px solid transparent;	/*border border-transparent*/
+		}
+
+		/*Pagination Buttons - Current selected */
+		.dataTables_wrapper .dataTables_paginate .paginate_button.current	{
+			color: #fff !important;				/*text-white*/
+			box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06); 	/*shadow*/
+			font-weight: 700;					/*font-bold*/
+			border-radius: .25rem;				/*rounded*/
+			background: #667eea !important;		/*bg-indigo-500*/
+			border: 1px solid transparent;		/*border border-transparent*/
+		}
+
+		/*Pagination Buttons - Hover */
+		.dataTables_wrapper .dataTables_paginate .paginate_button:hover		{
+			color: #fff !important;				/*text-white*/
+			box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);	 /*shadow*/
+			font-weight: 700;					/*font-bold*/
+			border-radius: .25rem;				/*rounded*/
+			background: #667eea !important;		/*bg-indigo-500*/
+			border: 1px solid transparent;		/*border border-transparent*/
+		}
+
+		/*Add padding to bottom border */
+		table.dataTable.no-footer {
+			border-bottom: 1px solid #e2e8f0;	/*border-b-1 border-gray-300*/
+			margin-top: 0.75em;
+			margin-bottom: 0.75em;
+		}
+
+		/*Change colour of responsive icon*/
+		table.dataTable.dtr-inline.collapsed>tbody>tr>td:first-child:before, table.dataTable.dtr-inline.collapsed>tbody>tr>th:first-child:before {
+			background-color: #667eea !important; /*bg-indigo-500*/
+		}
+
+
+
+
+</style>
+<!-- Three columns -->
+<div class="flex mb-4">
+    <div class="container w-full md:w-4/5 xl:w-3/5  mx-auto px-2">
+        <!--Card-->
+        <div id='recipients' class="p-8 mt-6 lg:mt-0 rounded shadow bg-white">
+            <table id="example" class="stripe hover" style="width:100%; padding-top: 1em;  padding-bottom: 1em;">
+                <thead>
+                <tr>
+                    <th data-priority="1">User ID</th>
+                    <th data-priority="2">First Name</th>
+                    <th data-priority="3">Last Name</th>
+                    <th data-priority="4">Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for item in profile %}
+                <tr>
+                    <td>{{ item.id }}</td>
+                    <td>{{ item.FirstName }}</td>
+                    <td>{{ item.LastName }}</td>
+                    <td><a href="{% url 'responses:team_single' item.id %}"
+                           class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 border border-blue-0 rounded">
+                        View
+                    </a></td>
+                </tr>
+                {% endfor %}
+                </tbody>
+
+            </table>
+        </div>
+        <!--/Card-->
+
+
+    </div>
+    <!--    <div class="w-1/3  h-12"></div>-->
+</div>
+<script type="text/javascript">
+    		$(document).ready(function() {
+
+			var table = $('#example').DataTable( {
+					responsive: true
+				} )
+				.columns.adjust()
+				.responsive.recalc();
+		} );
+
+
+</script>
+{% endblock body %}
